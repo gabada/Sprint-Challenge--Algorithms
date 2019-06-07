@@ -7,7 +7,21 @@ a)  a = 0 # O(1)
     while (a < n * n * n): O(n)
       a = a + n * n O(1)
 ```
-The big O is O(n) because as N is increased it takes more time to complete.
+The big O is O(n) because as N is increased it takes more time to complete. (Added big O analysis to code above)
+
+```
+b)  sum = 0 # O(1)
+    for i in range(n): # O(n)
+      i += 1 # O(1)
+      for j in range(i + 1, n): # O(n)
+        j += 1 # O(1)
+        for k in range(j + 1, n): # O(n)
+          k += 1 # O(1)
+          for l in range(k + 1, 10 + k): # O(1)
+            l += 1 # O(1)
+            sum += 1 # O(1)
+```
+This big O is O(n^3). This is because there are 3 loops that actually depend on the value of N. The fourth loop is a constant. To get O(n^3) I multiplied all of the loops `(O(n) * O(n) * O(n) * O(1))` (Added big O analysis to code above)
 
 
 
