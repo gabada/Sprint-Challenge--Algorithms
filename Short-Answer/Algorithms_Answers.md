@@ -7,7 +7,7 @@ a)  a = 0 # O(1)
     while (a < n * n * n): O(n)
       a = a + n * n O(1)
 ```
-The big O is O(n) because as N is increased it takes more time to complete. (Added big O analysis to code above)
+The Big O is O(n) because as N is increased it takes more time to complete. (Added big O analysis to code above)
 
 ```
 b)  sum = 0 # O(1)
@@ -21,8 +21,16 @@ b)  sum = 0 # O(1)
             l += 1 # O(1)
             sum += 1 # O(1)
 ```
-This big O is O(n^3). This is because there are 3 loops that actually depend on the value of N. The fourth loop is a constant. To get O(n^3) I multiplied all of the loops `(O(n) * O(n) * O(n) * O(1))` (Added big O analysis to code above)
+The Big O is O(n^3). This is because there are 3 loops that actually depend on the value of N. The fourth loop is a constant. To get O(n^3) I multiplied all of the loops `(O(n) * O(n) * O(n) * O(1))` (Added Big O analysis to code above)
 
+```
+c)  def bunnyEars(bunnies): O(1)
+      if bunnies == 0: # O(1)
+        return 0 # O(1)
+
+      return 2 + bunnyEars(bunnies-1) O(n)
+```
+The Big O is O(n). This problem is trickier because it's recursion. In this case you can think of bunnies as N. It is O(n) because as the value on N increases it will take more time to complete.
 
 
 
